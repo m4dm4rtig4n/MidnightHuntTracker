@@ -1,6 +1,12 @@
-# 🔴 MidnightHuntTracker
+<p align="center">
+  <img src="icon.svg" alt="MidnightHuntTracker" width="128" height="128"/>
+</p>
 
-**Addon WoW (Midnight)** pour suivre la progression de la **traque aux proies** avec un affichage clair et des alertes sonores.
+<h1 align="center">MidnightHuntTracker</h1>
+
+<p align="center">
+  <strong>Addon WoW (Midnight)</strong> pour suivre la progression de la <strong>traque aux proies</strong> avec un affichage clair et des alertes sonores.
+</p>
 
 > L'API WoW n'expose que 4 phases discrètes (Froid/Tiède/Chaud/Imminent), pas un pourcentage continu. Cet addon estime un **% approximatif** en comptant les points pondérés de chaque activité, et s'améliore à chaque traque grâce à l'auto-calibration.
 

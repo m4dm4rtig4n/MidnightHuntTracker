@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <!-- Background gradient (dark purple like the addon frame) -->
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a0a20"/>
+      <stop offset="100%" stop-color="#0a0410"/>
+    </radialGradient>
+    <!-- Crystal gradient (red gem) -->
+    <linearGradient id="crystal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4444"/>
+      <stop offset="30%" stop-color="#cc1111"/>
+      <stop offset="70%" stop-color="#990000"/>
+      <stop offset="100%" stop-color="#660000"/>
+    </linearGradient>
+    <!-- Crystal highlight -->
+    <linearGradient id="highlight" x1="0%" y1="0%" x2="50%" y2="50%">
+      <stop offset="0%" stop-color="#ff8888" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff4444" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Glow effect -->
+    <radialGradient id="glow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#ff2200" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff0000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Progress bar gradient -->
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3366ff"/>
+      <stop offset="40%" stop-color="#ffdd33"/>
+      <stop offset="65%" stop-color="#ff6611"/>
+      <stop offset="100%" stop-color="#ff1111"/>
+    </linearGradient>
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="crystalGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0" result="redBlur"/>
+      <feMerge>
+        <feMergeNode in="redBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="128" cy="128" r="124" fill="url(#bg)" stroke="#441111" stroke-width="4"/>
+
+  <!-- Outer ring -->
+  <circle cx="128" cy="128" r="120" fill="none" stroke="#661111" stroke-width="2" opacity="0.6"/>
+
+  <!-- Glow behind crystal -->
+  <ellipse cx="128" cy="115" rx="55" ry="60" fill="url(#glow)"/>
+
+  <!-- Crystal shape (red gem / diamond) -->
+  <g filter="url(#crystalGlow)">
+    <!-- Main crystal body -->
+    <polygon points="128,38 168,100 158,185 128,200 98,185 88,100" fill="url(#crystal)" stroke="#aa2222" stroke-width="1.5"/>
+
+    <!-- Crystal facets - left -->
+    <polygon points="128,38 88,100 128,110" fill="#bb2222" opacity="0.7"/>
+
+    <!-- Crystal facets - right -->
+    <polygon points="128,38 168,100 128,110" fill="#dd3333" opacity="0.5"/>
+
+    <!-- Crystal facets - bottom left -->
+    <polygon points="88,100 98,185 128,110" fill="#881111" opacity="0.8"/>
+
+    <!-- Crystal facets - bottom right -->
+    <polygon points="168,100 158,185 128,110" fill="#aa1515" opacity="0.6"/>
+
+    <!-- Crystal facets - bottom center -->
+    <polygon points="98,185 128,200 158,185 128,110" fill="#771010" opacity="0.9"/>
+
+    <!-- Highlight on crystal -->
+    <polygon points="128,45 105,90 128,105 145,85" fill="url(#highlight)" opacity="0.6"/>
+
+    <!-- Small bright spot -->
+    <ellipse cx="118" cy="72" rx="8" ry="12" fill="#ffaaaa" opacity="0.4" transform="rotate(-15, 118, 72)"/>
+  </g>
+
+  <!-- Progress bar at bottom -->
+  <rect x="48" y="212" width="160" height="10" rx="5" fill="#0a0510" stroke="#332233" stroke-width="1"/>
+  <rect x="49" y="213" width="110" height="8" rx="4" fill="url(#barGrad)" opacity="0.9"/>
+
+  <!-- Phase markers on bar -->
+  <line x1="112" y1="212" x2="112" y2="222" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <line x1="136" y1="212" x2="136" y2="222" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <line x1="184" y1="212" x2="184" y2="222" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+
+  <!-- Percentage text -->
+  <text x="128" y="240" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#cccccc" text-anchor="middle" opacity="0.7">~68%</text>
+
+</svg>
