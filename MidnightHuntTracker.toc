@@ -1,0 +1,9 @@
+## Interface: 120001
+## Title: Midnight Hunt Tracker
+## Notes: Traque la progression de la chasse aux proies (4 phases) avec points ponderes, alertes sonores et logs.
+## Author: Claude
+## Version: 5.1
+## SavedVariables: MidnightHuntTrackerDB
+## IconTexture: Interface\Icons\Ability_Hunter_SniperShot
+
+Core.lua
