@@ -4,14 +4,11 @@
 
 > L'API WoW n'expose que 4 phases discrètes (Froid/Tiède/Chaud/Imminent), pas un pourcentage continu. Cet addon estime un **% approximatif** en comptant les points pondérés de chaque activité, et s'améliore à chaque traque grâce à l'auto-calibration.
 
-<!--
-  📸 SCREENSHOTS À AJOUTER
-  Placez vos screenshots dans le dossier /screenshots/ puis décommentez les lignes ci-dessous.
--->
+## Aperçu
 
-<!-- ![Phase Froid](screenshots/phase_froid.png) -->
-<!-- ![Phase Chaud](screenshots/phase_chaud.png) -->
-<!-- ![Proie Imminente](screenshots/phase_imminent.png) -->
+| Phase Froid (début de traque) | Proie Imminente |
+|:---:|:---:|
+| ![Phase Froid](screenshots/0_pourcent.png) | ![Proie Imminente](screenshots/75_pourcent.png) |
 
 ## Fonctionnalités
 
