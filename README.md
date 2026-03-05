@@ -1,6 +1,6 @@
 # 🔴 MidnightHuntTracker
 
-**Addon WoW (The War Within - Midnight)** pour suivre la progression de la **traque aux proies** avec un affichage clair et des alertes sonores.
+**Addon WoW (Midnight)** pour suivre la progression de la **traque aux proies** avec un affichage clair et des alertes sonores.
 
 > L'API WoW n'expose que 4 phases discrètes (Froid/Tiède/Chaud/Imminent), pas un pourcentage continu. Cet addon estime un **% approximatif** en comptant les points pondérés de chaque activité, et s'améliore à chaque traque grâce à l'auto-calibration.
 
@@ -104,7 +104,7 @@ Le "poids" de chaque activité est calculé à partir du delta de stacks de l'au
 
 ## Prérequis
 
-- World of Warcraft: The War Within — **Midnight** (12.0+)
+- World of Warcraft: **Midnight** (12.0+)
 - Niveau 90 avec accès au système de traque aux proies
 
 ## Licence
