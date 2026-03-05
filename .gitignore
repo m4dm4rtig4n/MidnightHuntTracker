@@ -1,2 +1,10 @@
 # WoW SavedVariables (player-specific data)
 *.bak
+
+# Node.js (semantic-release)
+node_modules/
+package-lock.json
+
+# Build artifacts
+_build/
+MidnightHuntTracker.zip
